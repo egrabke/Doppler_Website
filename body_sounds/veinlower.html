@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<!-- Author: Emerson Grabke -->
+
+<html lang = "en">
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "css/style1.css" />
+    <link rel = "stylesheet" type = "text/css" href = "css/menubar.css" />
+    <link rel = "stylesheet" type = "text/css" href = "css/spectrogramstyle.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta charset="utf-8">
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/jquery.maphilight.js"></script>
+    <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+    <script src="js/beatdetector.js"></script>
+     
+	<title> Lower Limb Veins - Body Sounds Archive </title>
+	
+	<script type="text/javascript">
+		$(function() {
+		$('img[usemap]').maphilight();
+		});
+	</script>
+    
+    <script type="text/javascript">
+	
+	var qsParm = new Array();
+function qs() {
+var query = window.location.search.substring(1);
+var parms = query.split('&');
+for (var i=0; i<parms.length; i++) {
+var pos = parms[i].indexOf('=');
+if (pos > 0) {
+var key = parms[i].substring(0,pos);
+var val = parms[i].substring(pos+1);
+qsParm[key] = val;
+}
+}
+}
+	
+	</script>
+    
+    <noscript>Your browser does not support JavaScript!</noscript>
+    
+    <meta name="keywords" content="Doppler, Ultrasound, Body, Sounds, Archive, Wiki, Echo, Online, Sound, Artery, Arterial, Vein, Veneous, SRI, Sunnybrook, Health, Sciences, Centre, Center, SHSC, Research, Institute, Physics, Lower, Limb, Leg">
+    <meta name="description" content="Online Archive of Doppler Body Sounds">
+    
+</head>
+
+<body>
+<div id="banner" align="center">
+<a href="index.html"><img src="image/banner.jpg" alt="banner" width="640" height="130" /></a>
+</div>
+
+<div id="nav" align="left">
+
+	  <ul>
+	    <li><a href="index.html">Home</a></li>
+	    <li><a href="#" class="parent">About</a>
+	      <ul>
+	        <li><a href="doppler.html">Doppler Physics</a></li>
+	        <li><a class="parent" href="http://sunnybrook.ca/research/content/?page=sri-ab">Sunnybrook Research Institute</a>
+              <ul>
+              <li><a href="http://sunnybrook.ca/research/team/member.asp?t=10&m=37&page=172">Dr. Peter Burns</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+	    <li><a href="#" class="parent">Arterial Sounds</a>
+	      <ul>
+	        <li><a href="arteryhead.html" class="parent">Head and Neck</a>
+               <ul>
+                    <li><a href="arteryhead.html?sound=common">Common Carotid</a></li>
+                    <li><a href="arteryhead.html?sound=external">External Carotid</a></li>
+                    <li><a href="arteryhead.html?sound=internal">Internal Carotid</a></li>
+                    <li><a href="arteryhead.html?sound=vertebral">Vertebral</a></li>
+               </ul>
+            </li>
+	        <li><a href="arterythorax.html" class="parent">Thoracic</a>
+               <ul>
+                    <li><a href="arterythorax.html?sound=arch">Arch of Aorta</a></li>
+                    <li><a href="arterythorax.html?sound=ascending">Ascending Aorta</a></li>
+                    <li><a href="arterythorax.html?sound=brachiocephalic">Brachocephalic</a></li>
+                    <li><a href="arterythorax.html?sound=thoracic">Thoracic</a></li>
+               </ul>
+	        <li><a href="arteryupper.html" class="parent">Upper Limbs</a>
+               <ul>
+                    <li><a href="arteryupper.html?sound=axillary">Axillary</a></li>
+                    <li><a href="arteryupper.html?sound=brachial">Brachial</a></li>
+                    <li><a href="arteryupper.html?sound=radial">Radial</a></li>
+                    <li><a href="arteryupper.html?sound=ulnar">Ulnar</a></li>
+                    <li><a href="arteryupper.html?sound=subclavian">Subclavian</a></li>
+               </ul>
+            </li>
+	        <li><a href="arteryabdomen.html" class="parent">Abdominal and Pelvic</a>
+               <ul>
+                    <li><a href="arteryabdomen.html?sound=abdominalaorta">Abdominal Aorta</a></li>
+                    <li><a href="arteryabdomen.html?sound=celiac">Celiac Trunk</a></li>
+                    <li><a href="arteryabdomen.html?sound=hepatic">Common Hepatic</a></li>
+                    <li><a href="arteryabdomen.html?sound=commoniliac">Common Iliac</a></li>
+                    <li><a href="arteryabdomen.html?sound=externaliliac">External Iliac</a></li>
+                    <li><a href="arteryabdomen.html?sound=internaliliac">Internal Iliac</a></li>
+                    <li><a href="arteryabdomen.html?sound=renal">Renal</a></li>
+                    <li><a href="arteryabdomen.html?sound=sma">Superior Mesenteric</a></li>
+               </ul>
+            </li>
+	        <li><a href="arterylower.html" class="parent">Lower Limbs</a>
+               <ul>
+                    <li><a href="arterylower.html?sound=anterior">Anterior Tibial</a></li>
+                    <li><a href="arterylower.html?sound=common">Common Femoral</a></li>
+                    <li><a href="arterylower.html?sound=peroneal">Peroneal</a></li>
+                    <li><a href="arterylower.html?sound=popliteal">Popliteal</a></li>
+                    <li><a href="arterylower.html?sound=posterior">Posterior Tibial</a></li>
+                    <li><a href="arterylower.html?sound=superficial">Superficial Femoral</a></li>
+                    <li><a href="arterylower.html?sound=tibioperoneal">Tibioperoneal</a></li>
+               </ul>
+            </li>
+          </ul>
+        </li>
+	    <li><a href="#" class="parent">Veneous Sounds</a>
+	      <ul>
+	        <li><a href="veinhead.html" class="parent">Head and Neck</a>
+               <ul>
+                    <li><a href="veinhead.html?sound=anterior">Anterior Jugular</a></li>
+                    <li><a href="veinhead.html?sound=external">External Jugular</a></li>
+                    <li><a href="veinhead.html?sound=internal">Internal Jugular</a></li>
+                    <li><a href="veinhead.html?sound=vertebral">Vertebral</a></li>
+               </ul>
+            </li>
+	        <li><a href="veinthorax.html" class="parent">Thoracic</a>
+               <ul>
+                    <li><a href="veinthorax.html?sound=brachiocephalic">Brachiocephalic</a></li>
+                    <li><a href="veinthorax.html?sound=superior">Superior Vena Cava</a></li>
+               </ul>
+            </li>
+	        <li><a href="veinupper.html" class="parent">Upper Limbs</a>
+               <ul>
+                    <li><a href="veinupper.html?sound=axillary">Axillary</a></li>
+                    <li><a href="veinupper.html?sound=basilic">Basilic</a></li>
+                    <li><a href="veinupper.html?sound=brachial">Brachial</a></li>
+                    <li><a href="veinupper.html?sound=cephalic">Cephalic</a></li>
+                    <li><a href="veinupper.html?sound=radial">Radial</a></li>
+                    <li><a href="veinupper.html?sound=subclavian">Subclavian</a></li>
+                    <li><a href="veinupper.html?sound=ulnar">Ulnar</a></li>
+               </ul>
+            </li>
+	        <li><a href="veinabdomen.html" class="parent">Abdominal and Pelvic</a>
+               <ul>
+                    <li><a href="veinabdomen.html?sound=common">Common Iliac</a></li>
+                    <li><a href="veinabdomen.html?sound=external">External Iliac</a></li>
+                    <li><a href="veinabdomen.html?sound=hepatic">Hepatic</a></li>
+                    <li><a href="veinabdomen.html?sound=ivc">Inferior Vena Cava</a></li>
+                    <li><a href="veinabdomen.html?sound=internal">Internal Iliac</a></li>
+                    <li><a href="veinabdomen.html?sound=renal">Renal</a></li>
+               </ul>
+            </li>
+	        <li><a href="veinlower.html" class="parent">Lower Limbs</a>
+               <ul>
+                    <li><a href="veinlower.html?sound=anterior">Anterior Tibial</a></li>
+                    <li><a href="veinlower.html?sound=femoral">Femoral</a></li>
+                    <li><a href="veinlower.html?sound=great">Great Saphenous</a></li>
+                    <li><a href="veinlower.html?sound=popliteal">Popliteal</a></li>
+                    <li><a href="veinlower.html?sound=posterior">Posterior Tibial</a></li>
+                    <li><a href="veinlower.html?sound=smalls">Small Saphenous</a></li>
+               </ul>
+          </li>
+          </ul>
+        </li>
+      </ul>
+	  
+</div>
+
+  <br />
+  <br />
+  
+<table border="0" align="center">
+<tbody><tr><td rowspan="8">          <img src="image/veinlower.gif" alt="Image of Veins in Legs" border="0" usemap="#Map" /> <br />
+  <map name="Map" id="Map">
+    
+    <area shape="poly" coords="226,91,228,99,229,107,231,116,232,124,233,131,234,142,234,179,233,193,232,201,232,218,231,221,233,226,235,225,235,204,236,196,237,179,238,175,238,146,237,133,236,123,235,113,233,106,232,101,231,97,231,94" href="#" id="femoral" alt="Femoral Vein" title="Femoral Vein" class="femoral" data-maphilight='{"groupBy":".femoral","strokeColor":"0050ff"}' />
+    
+    <area shape="rect" coords="373,130,476,150" href="#" alt="Femoral Vein" class="femoral" id="femoral1" data-maphilight='{"groupBy":".femoral","strokeColor":"0050ff","fillOpacity":0}' />
+    
+    <area shape="poly" coords="233,226,235,225,236,231,238,242,240,247,240,251,241,254,238,253,238,253,236,251,236,248,234,239,234,231" href="#" alt="Popliteal Vein" title="Popliteal Vein" id="popliteal" class="popliteal" data-maphilight='{"groupBy":".popliteal","strokeColor":"0050ff"}' />
+    
+    <area shape="rect" coords="84,224,192,244" href="#" alt="Popliteal Vein" class="popliteal" id="popliteal1" data-maphilight='{"groupBy":".popliteal","strokeColor":"0050ff","fillOpacity":0}' />
+    
+    <area shape="poly" coords="241,257,243,264,245,271,247,277,249,283,246,284,245,280,243,274,242,270,241,265,240,261,239,256" href="#" id="smalls" alt="Small Saphenous Vein" title="Small Saphenous Vein" class="smallsaphenous" data-maphilight='{"groupBy":".smallsaphenous","strokeColor":"0050ff"}' />
+    
+    <area shape="poly" coords="250,286,251,289,253,292,254,295,255,298,256,301,258,306,259,311,260,315,261,322,262,325,262,352,260,364,259,371,258,377,256,383,255,387,253,392,251,397,250,403,249,411,248,423,248,444,246,444,246,415,247,406,249,397,250,393,253,387,255,382,256,375,258,369,259,364,259,356,259,334,258,324,257,316,256,310,253,301,251,296,249,292,247,288,247,286,248,286" href="#" id="smalls1" alt="Small Saphenous Vein" title="Small Saphenous Vein" class="smallsaphenous" data-maphilight='{"groupBy":".smallsaphenous","strokeColor":"0050ff"}' />
+    
+    <area shape="rect" coords="298,295,464,315" href="#" alt="Small Saphenous Vein" class="smallsaphenous" id="smalls2" data-maphilight='{"groupBy":".smallsaphenous","strokeColor":"0050ff","fillOpacity":0}' />
+    
+    <area shape="poly" coords="240,304,240,324,240,369,239,381,239,392,238,404,237,415,236,425,235,433,233,442,232,447,231,446,231,443,233,436,234,425,235,415,236,404,237,393,238,384,238,304" href="#" id="posterior" alt="Posterior Tibial Vein" title="Posterior Tibial Vein" class="posteriortibial" data-maphilight='{"groupBy":".posteriortibial","strokeColor":"0050ff"}' />
+    
+    <area shape="rect" coords="318,401,473,421" href="#" alt="Posterior Tibial Vein" class="posteriortibial" id="posterior1" data-maphilight='{"groupBy":".posteriortibial","strokeColor":"0050ff","fillOpacity":0}' />
+    
+    <area shape="poly" coords="240,304,242,307,244,312,245,317,246,325,247,335,247,343,246,348,245,355,243,362,242,369,241,379,240,392,239,409,239,432,239,452,241,452,241,411,242,403,242,392,243,381,245,371,246,365,247,359,248,351,249,345,249,323,248,315,247,310,245,306,243,302,242,300,240,300" href="#" alt="Anterior Tibial Vein" id="anterior" title="Anterior Tibial Vein" class="anteriortibial" data-maphilight='{"groupBy":".anteriortibial","strokeColor":"0050ff"}' />
+    
+    <area shape="rect" coords="323,348,470,368" href="#" alt="Anterior Tibial Vein" class="anteriortibial" id="anterior1" data-maphilight='{"groupBy":".anteriortibial","strokeColor":"0050ff","fillOpacity":0}' />
+    
+    <area shape="poly" coords="226,91,224,94,221,101,220,109,218,118,218,143,219,152,220,160,221,169,222,180,223,191,223,226,223,240,223,245,222,254,221,258,221,279,222,288,224,296,224,300,227,307,228,311,230,318,230,324,230,333,229,339,228,348,228,362,229,386,230,396,232,405,232,415,232,437,231,442,231,446,228,446,229,440,229,431,229,413,228,401,227,391,226,382,226,374,225,368,225,345,226,340,227,332,227,321,225,315,224,311,222,306,221,301,220,297,219,293,218,286,217,282,217,254,219,246,219,242,218,203,218,182,217,180,216,167,215,156,213,149,213,145,212,139,212,124,213,114,214,106,216,99,217,94,219,90,221,87" href="#" alt="Great Saphenous Vein" id="great" title="Great Saphenous Vein" class="greatsaphenous" data-maphilight='{"groupBy":".greatsaphenous","strokeColor":"0050ff"}' />
+    
+    <area shape="rect" coords="10,170,182,189" href="#" alt="Great Saphenous Vein" class="greatsaphenous" id="great1" data-maphilight='{"groupBy":".greatsaphenous","strokeColor":"0050ff","fillOpacity":0}' />
+
+  </map></td>
+<th style="text-align:left">Veins in the Lower Limbs</th></tr>
+<tr><td>
+<!--Add radio buttons here as necessary. Give them the same name but individual id's, then scroll to the bottom of the webpage-->
+<!--    <input type="radio" name="audio" id="carotid">Carotid
+    <input type="radio" name="audio" id="renal">Renal Artery
+    <input type="radio" name="audio" id="photo">Photo 28-->
+</td></tr>
+<tr><td>
+Status: <span id="status">Done</span><br /><br />
+Now Playing:<br />
+<span id="nowplaying">[None]</span><br />
+</td></tr>
+<tr><td>
+<!--<div id="bpm">0.0 BPM</div>-->
+<br />
+Time: <span id="time">00:00:00.0 | 00:00:00.0 </span>
+</td></tr>
+<tr><td>
+	<input type="checkbox" id="loop"><label for="loop"> Loop</label>
+<!--	<input type="checkbox" id="sgrambox" checked=""><label for="sgrambox"> Spectrogram</label>-->
+</td></tr>
+<tr><td>
+	<button class="control" id="rewind">|◀◀</button>
+	<button class="control" id="toggleplay">▶</button>
+</td></tr>
+<tr><td>
+<br>
+Download Current Audio File:
+	<a id="download" href="sounds/vertebralvein.wav"><br>Right Click -> Save Target As...</a>
+</td></tr>
+
+<div id="customAudio"></div>
+
+
+</tbody></table>
+<div id="container" style="position: relative; overflow: auto;">
+	<canvas id="audiodatacanvas" width="234" height="160" style="background-color: #EEE; display: inline-block;"></canvas>
+	<canvas id="spectrogramcanvas" width="234" height="256" style="background-color: #000; display: inline-block;"></canvas>
+	<div id="cursor" style="position: absolute; top: 0px; left: -1.5px; background-color: black; width: 1px; height: 100%; border-right-width: 1px; border-left-width: 1px; border-style: none solid; border-right-color: white; border-left-color: white;"></div>
+</div>
+
+<div id="spectrogramcanvas" style="overflow: auto;">
+	<canvas id="spectrum" width="1200" height="280" style="background-color: #303030; display: block;"></canvas>
+</div>
+
+<script>
+(function (global) {
+	'use strict';
+	
+		$(document).ready( function() {
+		
+		qsParm['sound'] = null;
+		qs();
+		if (qsParm['sound']) {
+			
+			global.document.getElementById(qsParm['sound']).click()
+			
+		}
+	});
+	
+	var bd = new BeatDetektor(50, 200);
+	
+	var zfs = function (v) {return v > 9 ? v : '0'+v;};
+	var timeStyle = function (t) {return zfs(Math.floor(t/(60*24)))+':'+zfs(Math.floor(t/60) % 60)+':'+zfs(Math.floor(t) % 60)+'.'+Math.floor(Math.floor((t % 1)*10));};
+	
+	var container = global.document.querySelector('#container');
+	
+	var audiodatacanvas = global.document.querySelector('#audiodatacanvas');
+	var adc = audiodatacanvas.getContext('2d');
+	var sgramcanvas = global.document.querySelector('#spectrogramcanvas');
+	var sgc = sgramcanvas.getContext('2d');
+	sgc.globalCompositeOperation = 'darker';
+	
+	var LChStyle = adc.createLinearGradient(0, 0, 0, audiodatacanvas.height/2);
+	LChStyle.addColorStop(0.0, '#69F');
+	LChStyle.addColorStop(0.5, '#00F');
+	LChStyle.addColorStop(1.0, '#03C');
+	
+	var RChStyle = adc.createLinearGradient(0, audiodatacanvas.height/2, 0, audiodatacanvas.height);
+	RChStyle.addColorStop(0.0, '#F09');
+	RChStyle.addColorStop(0.5, 'red');
+	RChStyle.addColorStop(1.0, '#900');
+	
+	var spectrumCanvas = global.document.querySelector('#spectrum');
+	var sc = spectrumCanvas.getContext('2d');
+	
+	var spectrumStyle = sc.createLinearGradient(0, spectrumCanvas.height, 0, 20);
+	spectrumStyle.addColorStop(0.95, '#F00');
+	spectrumStyle.addColorStop(0.85, '#F90');
+	spectrumStyle.addColorStop(0.60, '#9F0');
+	spectrumStyle.addColorStop(0.00, '#690');
+	
+	var spectrumPos = -1;
+	
+	var statusSpan = global.document.querySelector('#status');
+	var timeSpan = global.document.querySelector('#time');
+	var loopBox = global.document.querySelector('#loop');
+	var bpmOutput = global.document.getElementById('bpm');
+	
+	var acx = new (global.AudioContext || global.webkitAudioContext)();
+	
+	var timeratio = 30;
+	
+	var duration = 0;
+	
+	var fft = acx.createAnalyser();
+	fft.smoothingTimeConstant = 0.6;
+	var fftData = new Uint8Array(fft.frequencyBinCount);
+	
+	var frameSize = 1024;
+	
+	var jsnode = acx.createJavaScriptNode(1024, 1, 1);
+	jsnode.connect(acx.destination);
+	
+	jsnode.onaudioprocess = function (e) {
+		var currentTime = (e.timeStamp - startTime)/1000;
+		
+		if(duration === 0) return;
+		
+		if(currentTime > duration && source) {
+			stopPlayback();
+			cursor.style.left = -cursor.offsetWidth/2+'px';
+			if(loop) {
+				startPlayback(0);
+			}
+			else {
+				cursor.style.left = -cursor.offsetWidth/2+'px';
+				timeSpan.textContent = timeStyle(0)+' | '+timeStyle(duration);
+				pausedTime = 0;
+			}
+		}
+		else if(source) {
+			cursor.style.left = Math.round((Math.min(currentTime, duration))*timeratio-cursor.offsetWidth/2-1)+"px";
+			timeSpan.textContent = timeStyle(currentTime)+' | '+timeStyle(duration);
+		}
+		var leftChannel = e.inputBuffer.getChannelData(0);
+		bd.process(acx.currentTime, leftChannel);
+//		bpmOutput.textContent = bd.win_bpm_int/10+ " BPM";
+		
+	};
+	var updateSpectrum = function () {
+		
+		var ratio = spectrumCanvas.width/fftData.length;
+		
+		sc.fillStyle = 'rgba(48, 48, 48, 0.6'+/*0.55*/')';
+		sc.fillRect(0, 0, spectrumCanvas.width, spectrumCanvas.height);
+		sc.fillStyle = 'rgba(255, 255, 0, 0.5)';
+		sc.textAlign = 'center';
+		sc.font = '10px sans-serif';
+		sc.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+		sc.lineWidth = 1;
+		sc.beginPath();
+		/*for(var i=0; i < spectrumCanvas.width; i+=128) {
+			sc.moveTo(i+0.5, 0);
+			sc.lineTo(i+0.5, spectrumCanvas.height);
+		}*/
+		var odd = false;
+		for(var i=55; i < 20000; i*=2) {
+			var hz = i;
+			var peak = (hz*fft.fftSize)/acx.sampleRate;
+			sc.moveTo(Math.round(peak*ratio)+0.5, 0);
+			sc.lineTo(Math.round(peak*ratio)+0.5, spectrumCanvas.height);
+			if(hz >= 440)
+				sc.fillText(hz+' Hz', peak*ratio+5, 10+(odd)*(10));
+			odd = !odd;
+		}
+		
+		for(var i=0; i < spectrumCanvas.height; i+=64) {
+			sc.moveTo(0, spectrumCanvas.height-i+0.5);
+			sc.lineTo(spectrumCanvas.width, spectrumCanvas.height-i+0.5);
+		}
+		sc.stroke();
+		
+		fft.getByteTimeDomainData(fftData);
+		sc.strokeStyle = '#444';
+		sc.lineWidth = 4;
+		sc.beginPath();
+		for(var i=0; i < fftData.length; i++) {
+			sc.lineTo((i)*ratio, spectrumCanvas.height-fftData[i]);
+		}
+		sc.stroke();
+		
+		fft.getByteFrequencyData(fftData);
+		sc.fillStyle = 'rgba(0, 0, 0, 0.15)';
+		
+		sc.strokeStyle = spectrumStyle; //'#9F0';
+		sc.lineWidth = 5;
+		sc.beginPath();
+		sc.moveTo(-10, spectrumCanvas.height+10);
+		var maxval = 0;
+		var peak = [];
+		for(var i=0; i < fftData.length; i+=1) {
+			
+			/*var mag = Math.sqrt(fftData[i]*fftData[i] + fftData[i+1]*fftData[i+1]);
+			var lg = Math.log(mag);
+			//mag -= lg;
+			mag*= (256/360);*/
+			var mag = fftData[i];
+			sc.lineTo(i*ratio, spectrumCanvas.height-mag);
+			//sc.lineTo((i)*ratio, spectrumCanvas.height-fftData[i]);
+			if(mag > maxval && mag < Infinity) {
+				maxval = Math.max(maxval, mag);
+				peak = i;
+			}
+		}
+		sc.lineTo(spectrumCanvas.width+10, spectrumCanvas.height+10);
+		sc.closePath();
+		sc.stroke();
+		sc.fill();
+		
+		var hz = 1024;
+		//peak = (hz*fft.fftSize)/acx.sampleRate;
+		sc.strokeStyle = "rgba(255, 0, 0, 0.5)";
+		sc.lineWidth = 2;
+		sc.beginPath();
+		sc.moveTo(Math.round(peak*ratio), spectrumCanvas.height);
+		sc.lineTo(Math.round(peak*ratio), spectrumCanvas.height-maxval);
+		//sc.stroke();
+		sc.font = "bold 10px sans-serif";
+		sc.textAlign = 'left';
+		sc.fillStyle = '#F00';
+		//sc.fillText("Peak: "+Math.round((peak*acx.sampleRate)/fft.fftSize)+' Hz', 200*ratio, 10);
+		
+		if(spectrumPos >= 0) {
+			sc.strokeStyle = "rgba(0, 128, 255, 0.5)";
+			sc.lineWidth = 2;
+			sc.beginPath();
+			sc.moveTo(Math.round(spectrumPos), spectrumCanvas.height-256);
+			sc.lineTo(Math.round(spectrumPos), spectrumCanvas.height);
+			sc.stroke();
+			var hz = ((spectrumPos/ratio)*acx.sampleRate)/fft.fftSize;
+			sc.fillStyle = '#09F';
+			sc.fillText(Math.round(hz)+' Hz', spectrumPos+2, 33);
+		}
+	};
+	
+	setInterval(updateSpectrum, 1000/30);
+	
+	var source;
+	
+	var startTime = Date.now();
+	
+	var currentBuffer;
+	
+	var stopPlayback = function () {
+		if(source) {
+			source.noteOff(0);
+			source.disconnect(0);
+			fft.disconnect(0);
+			//jsnode.disconnect(0);
+			
+			source = undefined;
+		}
+		togglebtn.textContent = '▶';//►';
+		//cursor.style.left = -cursor.offsetWidth/2+'px';
+		//timeSpan.textContent = timeStyle(0)+' | '+timeStyle(duration);
+	};
+	
+	var startPlayback = function (offset) {
+		if(currentBuffer && !source) {
+			source = acx.createBufferSource();
+			source.loop = true;
+			source.buffer = currentBuffer;
+			source.connect(fft);
+			fft.connect(jsnode);
+			//jsnode.connect(acx.destination);
+			source.connect(acx.destination);
+			source.noteGrainOn(0, offset, currentBuffer.duration-offset);
+			startTime = Date.now() - offset*1000;
+		}
+		togglebtn.innerHTML = '&nbsp;▌▌';
+	};
+	
+	var rewindbtn = global.document.querySelector('#rewind');
+	var togglebtn = global.document.querySelector('#toggleplay');
+	var customAudio = global.document.querySelector('#customAudio');
+	
+	var pausedTime = 0;
+	
+	rewindbtn.addEventListener('click', function () {
+		if(source) { // Not paused
+			stopPlayback();
+			startPlayback(0);
+		}
+		else {
+			stopPlayback();
+			cursor.style.left = -cursor.offsetWidth/2+'px';
+			timeSpan.textContent = timeStyle(0)+' | '+timeStyle(duration);
+			pausedTime = 0;
+		}
+	}, false);
+	
+	togglebtn.addEventListener('click', function (e) {
+		if(source) {
+			pausedTime = (Date.now() - startTime)/1000;
+			stopPlayback();
+		}
+		else if(currentBuffer && !source) {
+			startPlayback(pausedTime);
+			pausedTime = 0;
+		}
+	}, false);
+	
+	
+	
+	var loop = false;
+	loopBox.addEventListener('change', function (e) {
+		loop = this.checked;
+	}, false);
+	customAudio.addEventListener('change', function (e) {
+		var btn = this;
+		btn.disabled = true;
+		var fr = new FileReader();
+		statusSpan.textContent = 'Reading file...';
+		X.abort();
+		fr.onload = function () {
+			statusSpan.textContent = 'Decoding audio...';
+			acx.decodeAudioData(fr.result, function (buffer) {
+				btn.disabled = false;
+				decodeAndAnalyze(buffer);
+			}, function () {
+				statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+				btn.disabled = false;
+			});
+		};
+		fr.readAsArrayBuffer(this.files[0]);
+	}, false);
+	container.addEventListener('mousedown', function (e) {
+		var y = (e.pageY - container.offsetTop);
+		if(y > audiodatacanvas.offsetHeight+sgramcanvas.offsetHeight) return; // On scrollbar
+		if(currentBuffer) {
+			var x = (e.pageX - container.offsetLeft + container.scrollLeft)/timeratio;
+			if(x > currentBuffer.duration || x < 0) return;
+			if(source) {
+				stopPlayback();
+				startPlayback(x);
+			}
+			else {
+				stopPlayback();
+				cursor.style.left = Math.round((Math.min(x, duration))*timeratio-cursor.offsetWidth/2-1)+"px";
+				timeSpan.textContent = timeStyle(x)+' | '+timeStyle(duration);
+				pausedTime = x;
+			}
+		}
+		
+		
+	}, false);
+	container.addEventListener('mousedown', function (e) {
+		e.preventDefault();
+	}, false);
+	spectrumCanvas.addEventListener('mousemove', function (e) {
+		spectrumPos = e.pageX - this.offsetLeft + this.parentNode.scrollLeft;
+	}, false);
+	spectrumCanvas.addEventListener('mouseout', function (e) {
+		spectrumPos = -1;
+	}, false);
+	
+	var waveformtimer = null;
+	
+	var worker = null;
+	var sgramtimer = null;
+	var workerMessage = function (e) {
+		//sgramtimer = setTimeout(function () {
+			if(!worker) return;
+			if(e.data.frames) {
+				for(var j=0; j < e.data.frames.length; j++) {
+					(function () {
+						var data = e.data.frames[j];
+						
+						var index = data.index;
+						var frameCount = data.frameCount;
+						
+						if(index > 50) {
+							//return;
+						}
+						
+						
+						var ratio = timeratio/data.sampleRate;
+						
+						var x = index*frameSize*ratio;
+						for(var i=0; i < frameSize/2; i++) {
+							sgc.fillStyle = 'hsl('+Math.floor((i/(frameSize/2))*360)+', '+100+'%, '+(data.spectrum[i]*150)*50+'%)';
+							sgc.fillRect(x, sgramcanvas.height-(i/(frameSize/2))*sgramcanvas.height, ratio*frameSize*2, sgramcanvas.height/(frameSize/2));
+						}
+					}());
+				}
+			}
+			else {
+				console.log('WORKER:', e.data);
+				worker.onmessage = null;
+				worker.terminate();
+				worker = null;
+			}
+		//}, 0);
+	};
+	
+	var decodeAndAnalyze = function (buffer) {
+		currentBuffer = buffer;
+		stopPlayback();
+		console.log('Audio data decoded');
+		audiodatacanvas.width = sgramcanvas.width = buffer.length*(timeratio/buffer.sampleRate);
+		
+		clearTimeout(waveformtimer);
+		clearTimeout(sgramtimer);
+		
+		if(worker) {
+			worker.onmessage = null;
+			worker.terminate();
+			worker = null;
+		}
+		
+		worker = new Worker('js/worker.js');
+		worker.onmessage = workerMessage;
+		
+		adc.clearRect(0, 0, audiodatacanvas.width, audiodatacanvas.height);
+		sgc.clearRect(0, 0, sgramcanvas.width, sgramcanvas.height);
+		
+		statusSpan.textContent = 'Done';
+		duration = buffer.duration;
+		
+		container.scrollLeft = 0;
+		cursor.style.left = -cursor.offsetWidth/2+'px';
+		timeSpan.textContent = timeStyle(0)+' | '+timeStyle(duration);
+		rewindbtn.disabled = false;
+		togglebtn.disabled = false;
+		customAudio.disabled = false;
+		
+		var channels = [buffer.getChannelData(0), buffer.getChannelData(1)];
+		
+		// Minutes
+		adc.fillStyle = 'rgba(0, 0, 0, 0.05)';
+		var odd = true;
+		for(var i=0; i < duration/60; i+=60/60) {
+			/*adc.beginPath();
+			adc.moveTo(i*60*timeratio-0.5, 0);
+			adc.lineTo(i*60*timeratio-0.5, audiodatacanvas.height);
+			adc.stroke();*/
+			if(!odd)
+				adc.fillRect(i*60*timeratio, 0, 1*60*timeratio, audiodatacanvas.height);
+			odd = !odd;
+		}
+		
+		adc.strokeStyle = '#AAA';
+		for(var c=0; c < channels.length; c++) {
+			var data = channels[c];
+			if(!data) continue;
+			adc.beginPath();
+			adc.moveTo(0, audiodatacanvas.height/4+(audiodatacanvas.height/2)*c+0.5);
+			adc.lineTo(audiodatacanvas.width, audiodatacanvas.height/4+(audiodatacanvas.height/2)*c+0.5);
+			adc.stroke();
+		}
+		
+		var ratio = timeratio/buffer.sampleRate;
+		
+		var chunkSize = 16*1024;
+		var offset = 0;
+		var lastY = [0, 0];
+		
+		var maxLen = channels[0].length;
+		
+		var drawWaveform = function () {
+			
+			adc.fillStyle = 'black';
+			var data = [];
+			var l = Math.min(maxLen, offset+chunkSize);
+			for(var c=0; c < channels.length; c++) {
+				data = channels[c];
+				if(!data) continue;
+				var x = offset*ratio;
+				adc.beginPath();
+				adc.moveTo(x, audiodatacanvas.height/4+(audiodatacanvas.height/2)*c+lastY[c]*(audiodatacanvas.height/4.1));
+				
+				for(var i=offset; i < l; i+=2) {
+					adc.lineTo(x, audiodatacanvas.height/4+(audiodatacanvas.height/2)*c+data[i]*(audiodatacanvas.height/4.1));
+					//adc.fillRect(x, audiodatacanvas.height/2, 1, data[i]*(audiodatacanvas.height));
+					lastY[c] = data[i];
+					x = i*ratio;
+					if(x > audiodatacanvas.width) break;
+				}
+				
+				if(c === 0) adc.strokeStyle = LChStyle;
+				else adc.strokeStyle = RChStyle;
+				adc.stroke();
+				
+			}
+			offset += chunkSize;
+			
+			if(l >= maxLen) {
+				channels[0] = null;
+				channels[1] = null;
+				data = null;
+				clearTimeout(waveformtimer);
+				return;
+			}
+			
+			waveformtimer = setTimeout(drawWaveform, 0);
+		};
+		
+		waveformtimer = setTimeout(drawWaveform, 0);
+		
+		var channelData = [];
+		for(var c=0; c < buffer.numberOfChannels; c++) {
+			channelData[c] = channels[c];
+		}
+		
+/*		if(global.document.getElementById('sgrambox').checked) {
+			worker.postMessage({
+				sampleRate: buffer.sampleRate,
+				length: buffer.length,
+				duration: buffer.duration,
+				channelData: channelData,
+				frameSize: frameSize
+			});
+		}
+		*/
+		
+		startPlayback(0);
+		
+	};
+	
+	var femoral = global.document.querySelector('#femoral');
+	
+	femoral.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/femoralvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[FemoralVein.wav]';
+	
+	var musicfile = "sounds/femoralvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+	
+	var femoral1 = global.document.querySelector('#femoral1');
+	
+	femoral1.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/femoralvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[FemoralVein.wav]';
+	
+	var musicfile = "sounds/femoralvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+	
+	var great = global.document.querySelector('#great');
+	
+	great.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/greatsaphenousvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[GreatSaphenousVein.wav]';
+	
+	var musicfile = "sounds/greatsaphenousvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+		
+	var great1 = global.document.querySelector('#great1');
+	
+	great1.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/greatsaphenousvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[GreatSaphenousVein.wav]';
+	
+	var musicfile = "sounds/greatsaphenousvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+	
+	var popliteal = global.document.querySelector('#popliteal');
+	
+	popliteal.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/poplitealvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[PoplitealVein.wav]';
+	
+	var musicfile = "sounds/poplitealvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+	
+	var popliteal1 = global.document.querySelector('#popliteal1');
+	
+	popliteal1.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/poplitealvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[PoplitealVein.wav]';
+	
+	var musicfile = "sounds/poplitealvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+
+	var smalls = global.document.querySelector('#smalls');
+	
+	smalls.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/smallsaphenousvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[SmallSaphenousVein.wav]';
+	
+	var musicfile = "sounds/smallsaphenousvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+
+	var smalls1 = global.document.querySelector('#smalls1');
+	
+	smalls1.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/smallsaphenousvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[SmallSaphenousVein.wav]';
+	
+	var musicfile = "sounds/smallsaphenousvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+	
+		var smalls2 = global.document.querySelector('#smalls2');
+	
+	smalls2.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/smallsaphenousvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[SmallSaphenousVein.wav]';
+	
+	var musicfile = "sounds/smallsaphenousvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+	
+	var anterior = global.document.querySelector('#anterior');
+	
+	anterior.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/anteriortibialvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[AnteriorTibialVein.wav]';
+	
+	var musicfile = "sounds/anteriortibialvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+
+	var anterior1 = global.document.querySelector('#anterior1');
+	
+	anterior1.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/anteriortibialvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[AnteriorTibialVein.wav]';
+	
+	var musicfile = "sounds/anteriortibialvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+	
+	var posterior = global.document.querySelector('#posterior');
+	
+	posterior.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/posteriortibialvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[PosteriorTibialVein.wav]';
+	
+	var musicfile = "sounds/posteriortibialvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+
+	var posterior1 = global.document.querySelector('#posterior1');
+	
+	posterior1.addEventListener('click', function () {
+	
+	document.getElementById("download").href="sounds/posteriortibialvein.wav";
+	document.getElementById("nowplaying").innerHTML = '[PosteriorTibialVein.wav]';
+	
+	var musicfile = "sounds/posteriortibialvein.wav"
+	
+	var X = new XMLHttpRequest();
+	X.open('GET', musicfile, true);
+	X.responseType = 'arraybuffer';
+	console.log('Downloading audio...');
+	statusSpan.textContent = 'Downloading...';
+	X.addEventListener('load', function () {
+		console.log('Decoding audio...');
+		statusSpan.textContent = 'Decoding audio...';
+		customAudio.disabled = true;
+		acx.decodeAudioData(X.response, decodeAndAnalyze, function () {
+			customAudio.disabled = false;
+			statusSpan.innerHTML = '<span style="color: red">An error occurred during decoding</span>';
+		});
+	}, false);
+
+	X.send();
+    });
+				
+}(window));
+</script>
+  
+</body>
+</html>

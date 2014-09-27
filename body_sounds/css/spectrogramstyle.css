@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+	body {
+		margin: 0px;
+		font-family: sans-serif;
+	}
+	
+	body, table {
+		font-size: 13px;
+	}
+	
+	#bpm {
+		
+	}
+	
+	#time {
+		font-family: monospace;
+	}
+	
+/*	#container {
+		display:none
+	}
+	
+	#spectrogramcanvas {
+		display:none
+	}*/
+	
+	button.control {
+		width: 60px;
+		height: 30px;
+		font-size: 20px;
+	}
+	
+	#container {
+		display:none
+	}
+	
+	#spectrogramcanvas {
+		display:none
+	}

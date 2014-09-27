@@ -1,0 +1,33 @@
+/* NAVIGATION */
+body { background:none; font-family:Tahoma,Arial,sans-serif; font-size:12px; margin:0px; padding:0px; }
+.clearfix { }
+.clearfix:after{ content: "."; display:block; height:0; font-size:0; clear:both; visibility:visible; }
+
+#nav { background:#3b7df6 url(images/bg.jpg) repeat-x; margin:15px auto; width:1000px; padding:0px; }
+#nav .parent { font-weight:bold; }
+#nav:after{ content: "."; display:block; height:0; font-size:0; clear:both; visibility:visible; }
+#nav ul { margin:0px; padding:0px; list-style:none; }
+#nav ul li { margin:0px; padding:8px 0px; list-style:none; float:left; }
+#nav ul li a { padding:8px; margin:0px; color:#FFF; text-decoration:none; }
+#nav ul li a:hover { background:#444 url(images/hover.jpg) repeat-x; color:#FFF; text-decoration:none; }
+
+#nav,#nav ul,#nav ul li ul,#nav ul li ul li ul,#nav ul li ul li ul li ul {z-index:1}
+
+/* 1ST LEVEL DROP-DOWN MENU */
+#nav ul li ul { display:none; }
+#nav ul li:hover > ul { display:block; position:absolute; top:185px; }
+#nav ul li:hover > ul li{ float:left; margin:0px; padding:0px; list-style:none;  }
+#nav ul li:hover > ul li a { background:#444; text-decoration:none; }
+#nav ul li:hover > ul li a:hover { background:#666; }
+
+/* 2ND LEVEL DROP-DOWN MENU */
+#nav ul li > ul li ul { display:none; }
+#nav ul li > ul li:hover > ul { display:block; position:absolute; top:22px; }
+#nav ul li > ul li:hover ul li { margin:0px; padding:0px 0px; float:none; list-style:none; width:11em; position:relative; }
+#nav ul li > ul li:hover ul li a { display:block; background:#666; }
+#nav ul li > ul li:hover ul li a:hover { background:#999; }
+
+/* 3RD LEVEL DROP-DOWN MENU */
+#nav ul li > ul li ul li > ul { display:none; }
+#nav ul li > ul li ul li:hover > ul { display:block; position:absolute; top:0px; left:100%; }
+#nav ul li > ul li ul li:hover > ul li { list-style:none; float:none; margin-left:1px; padding:0px; }

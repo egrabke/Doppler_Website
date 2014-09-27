@@ -1,0 +1,39 @@
+a:link {color:#101010;}      /* unvisited link */
+a:visited {
+	color: #101010;
+}   /* visited link */
+a:hover {color:#8f8f8f;}     /* mouse over link */
+a:active {
+	color: #F00;
+}    /* selected link */
+
+body,td,th {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	/*color: #FFF; */
+}
+
+h1 {
+	font-size:1.875em;
+	color:#3a3c90;
+	font-weight:bold;
+}
+
+h2 {
+	font-size:1.3em;
+	color:#7ab800;
+	font-weight:bold;
+}
+
+div.doppler {
+	break-inside: avoid;
+	padding:1em 5em;
+	margin:1em 5em;
+}
+
+p {
+	font-size:1.2em;
+}
+
+body {
+	background-color: white;
+}

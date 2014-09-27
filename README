@@ -1,0 +1,12 @@
+Doppler Body Sound Public Archive
+
+I created this website for the Sunnybrook Research Institute to be a public archive for hosting sounds acquired by Doppler Ultrasound of healthy and diseased human blood vessels for diagnostic purposes by trained sonographers.
+
+It is important to note the website uploaded was how it was in its alpha phase. This is because my work on this site occurred in the summer of 2013, when only Google Chrome was compatible with the newly released HTML5 web audio API. Thus I made the website compatible with Chrome, but could not include compatibility with other browsers within the course of my internship. As well, at the time only half of the major human vessels were documented. These sound files have been included (and can be used by the website), along with a folder of blank .wav files that the website was pre-programmed to expect once the sound patterns of the vessels were acquired (for use by my successor).
+
+It should also be noted that, for security reasons, the website must be hosted on a server for the AJAX calls to work properly.
+
+Special thanks to:
+DJazz (https://github.com/daniel-j) for the spectrum analyser
+David Lynch for the maphilight plugin
+Dr. John Hudson for permission for me to release this website
